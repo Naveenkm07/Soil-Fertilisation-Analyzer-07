@@ -1,0 +1,5 @@
+com\fertilefarms\controller\SoilAnalysisController.class
+com\fertilefarms\service\SoilAnalysisService.class
+com\fertilefarms\model\SoilAnalysis.class
+com\fertilefarms\SoilAnalysisApplication.class
+com\fertilefarms\repository\SoilAnalysisRepository.class
