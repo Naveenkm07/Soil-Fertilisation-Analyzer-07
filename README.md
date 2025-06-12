@@ -185,7 +185,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help:
 - Create an issue on GitHub
-- Contact: [Your Email]
+- Contact: kmnaveenkm01@gmail.com
 - Project URL: [https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07](https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07)
 
 ---
