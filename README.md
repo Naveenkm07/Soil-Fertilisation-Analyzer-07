@@ -11,6 +11,7 @@ A comprehensive soil analysis and fertilizer management system that helps farmer
 
 ### Frontend
 - **React 18** with TypeScript
+the unique login 
 - **Vite** for fast development and building
 - **Tailwind CSS** for styling
 - **shadcn/ui** for modern UI components
