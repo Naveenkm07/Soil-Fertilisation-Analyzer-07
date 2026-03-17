@@ -4,7 +4,7 @@ import { Instagram, Facebook } from "lucide-react";
 
 const SocialContactLinks = () => {
   const handleInstagram = () => {
-    window.open('https://instagram.com/soilanalyzer', '_blank');
+    window.open('https://instagram.com/naveen.techie', '_blank');
   };
 
   const handleFacebook = () => {
@@ -12,7 +12,7 @@ const SocialContactLinks = () => {
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "+1234567890";
+    const phoneNumber = "9591502209";
     const message = "Hello, I need help with soil analysis from Soil Fertilisation Analyzer";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

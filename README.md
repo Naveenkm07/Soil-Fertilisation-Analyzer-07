@@ -4,7 +4,7 @@ A comprehensive soil analysis and fertilizer management system that helps farmer
 
 ## 🚀 Live Demo
 
-- **Netlify (Recommended)**: [https://fertile-farms-insights.netlify.app](https://fertile-farms-insights.netlify.app)
+- **Netlify (Recommended)**: [https://soil-fertilizer.netlify.app/](https://soil-fertilizer.netlify.app/)
 - **GitHub Pages**: [https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07](https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07)
 
 ## ✨ Features
