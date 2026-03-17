@@ -1,194 +1,151 @@
 # 🌱 Fertile Farms Insights Hub
 
-A comprehensive soil analysis and fertilizer management system that helps farmers optimize their soil health and crop yields.
+A comprehensive soil analysis and fertilizer management system that helps farmers optimize soil health and crop yields through data-driven insights.
 
 ## 🚀 Live Demo
 
-- **Frontend**: [https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07](https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07)
-- **Backend API**: [https://your-backend-url.com](https://your-backend-url.com) (Deploy separately)
+- **Netlify (Recommended)**: [https://fertile-farms-insights.netlify.app](https://fertile-farms-insights.netlify.app)
+- **GitHub Pages**: [https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07](https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07)
 
-## 🛠️ Technologies Used
+## ✨ Features
 
-### Frontend
-- **React 18** with TypeScript
-the unique login 
-- **Vite** for fast development and building
-- **Tailwind CSS** for styling
-- **shadcn/ui** for modern UI components
-- **React Router** for navigation
-- **React Query** for data fetching
-- **Recharts** for data visualization
+- **Soil Analysis Management** - Add, edit, and track soil analysis records
+- **Farm Organization** - Categorize data by farm name and location
+- **Nutrient Monitoring** - Track N-P-K levels, pH, and organic matter
+- **Historical Trends** - View analysis history with data visualization
+- **Search & Filter** - Quickly find specific analyses
+- **PDF Export** - Generate reports for offline use
+- **Responsive Design** - Works seamlessly on desktop and mobile
+- **Modern UI** - Built with shadcn/ui components
 
-### Backend
-- **Spring Boot 3.2.3** with Java 17
-- **Spring Data JPA** for database operations
-- **H2 Database** for data storage
-- **Maven** for dependency management
-- **RESTful API** design
+## �️ Tech Stack
 
-## 📁 Project Structure
+**Frontend**
+- React 18 + TypeScript
+- Vite (build tool)
+- Tailwind CSS
+- shadcn/ui components
+- React Router
+- TanStack Query
+- Recharts (charts)
+- jsPDF (PDF export)
 
-```
-fertile-farms-insights-hub-main/
-├── src/                    # React frontend source code
-│   ├── components/         # Reusable UI components
-│   ├── pages/             # Application pages
-│   ├── hooks/             # Custom React hooks
-│   ├── types/             # TypeScript type definitions
-│   └── utils/             # Utility functions
-├── backend/               # Spring Boot backend
-│   ├── src/main/java/     # Java source code
-│   ├── src/main/resources/ # Configuration and static files
-│   └── pom.xml           # Maven configuration
-├── public/               # Static assets
-└── package.json          # Frontend dependencies
-```
+**Backend** (Optional - for full functionality)
+- Spring Boot 3.2 + Java 17
+- Spring Data JPA
+- H2 Database
 
-## 🚀 Quick Start
+## � Installation
 
 ### Prerequisites
-- **Node.js** (v16 or higher)
-- **Java 17** or higher
-- **Maven** 3.6 or higher
-- **Git**
+- Node.js 18+ 
+- Java 17+ (for backend)
+- Maven 3.6+ (for backend)
 
-### Local Development
+### Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07.git
-   cd Soil-Fertilisation-Analyzer-07
-   ```
+```bash
+# Clone repository
+git clone https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07.git
+cd Soil-Fertilisation-Analyzer-07
 
-2. **Install frontend dependencies**
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
+```
 
-3. **Start the backend server**
-   ```bash
-   cd backend
-   mvn spring-boot:run
-   ```
-   Backend will be available at: `http://localhost:8081`
+### Development
 
-4. **Start the frontend development server**
-   ```bash
-   npm run dev
-   ```
-   Frontend will be available at: `http://localhost:8080`
+```bash
+# Start frontend only
+npm run dev
 
-## 🌐 Deployment Options
+# Start backend (optional)
+cd backend
+mvn spring-boot:run
+```
 
-### Option 1: GitHub Pages (Frontend Only)
+## 🌐 Deployment
 
-1. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+### Netlify (Recommended for Frontend)
 
-2. **Configure GitHub Pages**
-   - Go to your repository settings
-   - Navigate to "Pages" section
-   - Select "gh-pages" branch as source
-   - Your app will be available at: `https://naveenkm07.github.io/Soil-Fertilisation-Analyzer-07`
+**Option 1: Drag & Drop**
+1. Run `npm run build`
+2. Drag the `dist/` folder to [Netlify Drop](https://app.netlify.com/drop)
 
-### Option 2: Full Stack Deployment
+**Option 2: Git Integration**
+1. Push code to GitHub
+2. Connect repo at [netlify.com](https://netlify.com)
+3. Build settings:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
 
-#### Backend Deployment Options:
-- **Heroku**: Deploy Spring Boot app
-- **Railway**: Easy deployment platform
-- **Render**: Free tier available
-- **AWS/Google Cloud/Azure**: For production use
+**Option 3: Netlify CLI**
+```bash
+npm install -g netlify-cli
+npm run build
+netlify deploy --prod --dir=dist
+```
 
-#### Frontend Deployment Options:
-- **Vercel**: Excellent for React apps
-- **Netlify**: Great free tier
-- **GitHub Pages**: Already configured
-- **Firebase Hosting**: Google's platform
-
-### Option 3: Docker Deployment
-
-1. **Create Dockerfile for backend**
-   ```dockerfile
-   FROM openjdk:17-jdk-slim
-   COPY target/soil-analysis-service-1.0-SNAPSHOT.jar app.jar
-   EXPOSE 8081
-   ENTRYPOINT ["java","-jar","/app.jar"]
-   ```
-
-2. **Create Dockerfile for frontend**
-   ```dockerfile
-   FROM node:18-alpine
-   WORKDIR /app
-   COPY package*.json ./
-   RUN npm install
-   COPY . .
-   RUN npm run build
-   FROM nginx:alpine
-   COPY --from=0 /app/dist /usr/share/nginx/html
-   EXPOSE 80
-   ```
+### GitHub Pages
+```bash
+npm run deploy
+```
 
 ## 🔧 Configuration
 
 ### Environment Variables
 
-Create `.env` file in the root directory:
+Create `.env` in root:
 ```env
-# Frontend Configuration
 VITE_API_BASE_URL=http://localhost:8081/api
-
-# Backend Configuration (application.properties)
-SERVER_PORT=8081
-SPRING_DATASOURCE_URL=jdbc:h2:mem:soildb
 ```
 
-### API Endpoints
+For production, set `VITE_API_BASE_URL` to your deployed backend URL.
 
-- `GET /api/analyses` - Get all soil analyses
-- `POST /api/analyses` - Create new soil analysis
-- `GET /api/analyses/{id}` - Get specific analysis
-- `DELETE /api/analyses/{id}` - Delete analysis
-- `GET /api/analyses/location/{location}` - Get analyses by location
-- `GET /api/analyses/farm/{farmName}` - Get analyses by farm name
+### API Endpoints (Backend)
 
-## 📊 Features
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/analyses` | Get all analyses |
+| POST | `/api/analyses` | Create analysis |
+| GET | `/api/analyses/{id}` | Get by ID |
+| DELETE | `/api/analyses/{id}` | Delete analysis |
+| GET | `/api/analyses/location/{location}` | Filter by location |
+| GET | `/api/analyses/farm/{farmName}` | Filter by farm |
 
-- ✅ **Soil Analysis Management**: Add, edit, delete soil analysis data
-- ✅ **Farm Tracking**: Organize data by farm and location
-- ✅ **Nutrient Monitoring**: Track N-P-K levels and pH
-- ✅ **Historical Data**: View analysis history and trends
-- ✅ **Search & Filter**: Find specific analyses quickly
-- ✅ **Responsive Design**: Works on desktop and mobile
-- ✅ **Modern UI**: Beautiful, intuitive interface
-- ✅ **Data Visualization**: Charts and graphs for insights
+## � Project Structure
+
+```
+Soil-Fertilisation-Analyzer-07/
+├── src/                    # React source
+│   ├── components/         # UI components
+│   ├── pages/             # Route pages
+│   ├── hooks/             # Custom hooks
+│   ├── types/             # TypeScript types
+│   └── utils/             # Utilities
+├── backend/               # Spring Boot API
+├── public/               # Static assets
+└── dist/                 # Build output
+```
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create feature branch: `git checkout -b feature/name`
+3. Commit changes: `git commit -m 'Add feature'`
+4. Push to branch: `git push origin feature/name`
 5. Open a Pull Request
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see [LICENSE](LICENSE) file.
 
-## 🙏 Acknowledgments
+## � Contact
 
-- Built with modern web technologies
-- Inspired by the need for better soil management
-- Special thanks to the open-source community
-
-## 📞 Support
-
-If you have any questions or need help:
-- Create an issue on GitHub
-- Contact: kmnaveenkm01@gmail.com
-- Project URL: [https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07](https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07)
+- **Email**: kmnaveenkm01@gmail.com
+- **GitHub**: [@Naveenkm07](https://github.com/Naveenkm07)
+- **Issues**: [Create an issue](https://github.com/Naveenkm07/Soil-Fertilisation-Analyzer-07/issues)
 
 ---
 
-**Made with ❤️ for better farming**
+**Built with ❤️ for sustainable farming**
